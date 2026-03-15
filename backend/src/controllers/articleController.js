@@ -5,7 +5,25 @@ import Category from '../models/categoryModel.js';
 // @route   GET /api/articles
 // @access  Public
 const getArticles = async (req, res) => {
-  const articles = await Article.find({ isPublished: true }).populate('category', 'name slug').populate('author', 'name');
+  const { category, section } = req.query;
+  const query = { isPublished: true };
+
+  if (section && section !== 'All') {
+    query.section = section;
+  }
+
+  if (category) {
+    const categoryDoc = await Category.findOne({ slug: category });
+    if (categoryDoc) {
+      query.category = categoryDoc._id;
+    }
+  }
+
+  const articles = await Article.find(query)
+    .populate('category', 'name slug')
+    .populate('author', 'name')
+    .sort({ createdAt: -1 });
+    
   res.json(articles);
 };
 
@@ -26,7 +44,7 @@ const getArticleBySlug = async (req, res) => {
 // @route   POST /api/articles
 // @access  Private/Admin
 const createArticle = async (req, res) => {
-  const { title, slug, content, category, coverImage, isPublished, section, tags } = req.body;
+  const { title, slug, content, category, coverImage, isPublished, isLive, liveLink, section, tags } = req.body;
 
   const articleExists = await Article.findOne({ slug });
 
@@ -48,6 +66,8 @@ const createArticle = async (req, res) => {
     category,
     coverImage,
     isPublished,
+    isLive,
+    liveLink,
     section,
     tags,
   });

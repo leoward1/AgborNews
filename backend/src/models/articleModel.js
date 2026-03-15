@@ -31,6 +31,13 @@ const articleSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+  isLive: {
+    type: Boolean,
+    default: false,
+  },
+  liveLink: {
+    type: String, // URL to the stream (e.g., YouTube/StreamYard)
+  },
   section: {
     type: String,
     enum: ['General', 'Citizen of the Month', 'Hope for Today', 'Career Corner', 'Agbor in Pictures'],

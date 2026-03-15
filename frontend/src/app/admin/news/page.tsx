@@ -13,6 +13,8 @@ export default function AdminNewsPage() {
   const [category, setCategory] = useState("");
   const [section, setSection] = useState("General");
   const [isPublished, setIsPublished] = useState(false);
+  const [isLive, setIsLive] = useState(false);
+  const [liveLink, setLiveLink] = useState("");
 
   // In a real implementation this would fetch from backend API
   const mockCategories = [
@@ -100,17 +102,44 @@ export default function AdminNewsPage() {
              ></textarea>
           </div>
 
-          <div className="flex items-center gap-2">
-            <input 
-              type="checkbox" 
-              id="isPublished"
-              checked={isPublished}
-              onChange={(e) => setIsPublished(e.target.checked)}
-              className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" 
-            />
-            <label htmlFor="isPublished" className="text-sm font-medium">
-              Publish immediately
-            </label>
+          <div className="flex flex-col gap-4 p-4 bg-muted/30 rounded-lg border border-dashed">
+            <div className="flex items-center gap-2">
+              <input 
+                type="checkbox" 
+                id="isPublished"
+                checked={isPublished}
+                onChange={(e) => setIsPublished(e.target.checked)}
+                className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary" 
+              />
+              <label htmlFor="isPublished" className="text-sm font-medium">
+                Publish immediately
+              </label>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <input 
+                type="checkbox" 
+                id="isLive"
+                checked={isLive}
+                onChange={(e) => setIsLive(e.target.checked)}
+                className="h-4 w-4 rounded border-gray-300 text-destructive focus:ring-destructive" 
+              />
+              <label htmlFor="isLive" className="text-sm font-medium text-destructive">
+                Feature as LIVE (Streaming)
+              </label>
+            </div>
+
+            {isLive && (
+              <div className="animate-in slide-in-from-top-1">
+                <label className="block text-sm font-medium mb-2" htmlFor="liveLink">Live Stream URL (StreamYard/YouTube)</label>
+                <Input 
+                  id="liveLink" 
+                  value={liveLink} 
+                  onChange={(e) => setLiveLink(e.target.value)} 
+                  placeholder="https://youtube.com/live/..." 
+                />
+              </div>
+            )}
           </div>
 
           <div className="pt-4 border-t flex justify-end">
