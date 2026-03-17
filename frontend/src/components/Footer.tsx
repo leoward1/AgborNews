@@ -42,11 +42,11 @@ export function Footer() {
           <div>
             <h3 className="font-black text-xs uppercase tracking-widest mb-6 border-b pb-2 w-max border-primary/30">Explore</h3>
             <ul className="space-y-4 text-sm font-medium text-muted-foreground">
-              <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-              <li><Link href="/news" className="hover:text-primary transition-colors">News</Link></li>
-              <li><Link href="/live" className="hover:text-primary transition-colors">Live TV</Link></li>
-              <li><Link href="/agbor-in-pictures" className="hover:text-primary transition-colors">Gallery</Link></li>
-              <li><Link href="/career-corner" className="hover:text-primary transition-colors">Jobs</Link></li>
+              <li><Link href="/" className="hover:text-primary transition-colors cursor-pointer">Home</Link></li>
+              <li><Link href="/news" className="hover:text-primary transition-colors cursor-pointer">News</Link></li>
+              <li><Link href="/live" className="hover:text-primary transition-colors cursor-pointer">Live TV</Link></li>
+              <li><Link href="/agbor-in-pictures" className="hover:text-primary transition-colors cursor-pointer">Gallery</Link></li>
+              <li><Link href="/career-corner" className="hover:text-primary transition-colors cursor-pointer">Jobs</Link></li>
             </ul>
           </div>
 
@@ -54,10 +54,10 @@ export function Footer() {
           <div>
             <h3 className="font-black text-xs uppercase tracking-widest mb-6 border-b pb-2 w-max border-primary/30">Company</h3>
             <ul className="space-y-4 text-sm font-medium text-muted-foreground">
-              <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
-              <li><Link href="/advertise" className="hover:text-primary transition-colors">Advertise</Link></li>
-              <li><Link href="/support" className="hover:text-primary transition-colors">Support</Link></li>
+              <li><Link href="/about" className="hover:text-primary transition-colors cursor-pointer">About Us</Link></li>
+              <li><Link href="/contact" className="hover:text-primary transition-colors cursor-pointer">Contact</Link></li>
+              <li><Link href="/advertise" className="hover:text-primary transition-colors cursor-pointer">Advertise</Link></li>
+              <li><Link href="/support" className="hover:text-primary transition-colors cursor-pointer">Support</Link></li>
             </ul>
           </div>
 
@@ -65,9 +65,9 @@ export function Footer() {
           <div>
             <h3 className="font-black text-xs uppercase tracking-widest mb-6 border-b pb-2 w-max border-primary/30">Legal</h3>
             <ul className="space-y-4 text-sm font-medium text-muted-foreground">
-              <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link></li>
-              <li><Link href="/disclaimer" className="hover:text-primary transition-colors">Disclaimer</Link></li>
+              <li><Link href="/privacy" className="hover:text-primary transition-colors cursor-pointer">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-primary transition-colors cursor-pointer">Terms of Service</Link></li>
+              <li><Link href="/disclaimer" className="hover:text-primary transition-colors cursor-pointer">Disclaimer</Link></li>
             </ul>
           </div>
         </div>
