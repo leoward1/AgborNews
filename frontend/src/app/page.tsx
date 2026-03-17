@@ -5,48 +5,74 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/20 via-background to-destructive/10">
+      <section className="relative min-h-[85vh] lg:h-[90vh] flex items-center justify-center overflow-hidden bg-[#fafafa] dark:bg-zinc-950">
+        {/* Advanced Background Gradients */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-           <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/20 rounded-full blur-[120px] animate-pulse"></div>
-           <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-destructive/10 rounded-full blur-[120px] animate-pulse delay-1000"></div>
+           <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-primary/15 rounded-full blur-[150px] animate-pulse"></div>
+           <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-destructive/10 rounded-full blur-[150px] animate-pulse delay-1000"></div>
+           <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         </div>
         
-        <div className="container relative z-10 px-4 flex flex-col lg:flex-row items-center gap-12 text-center lg:text-left">
-          <div className="flex-1">
-            <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
-              <span className="block text-primary">Your Community.</span>
-              <span className="block text-destructive mt-2 drop-shadow-sm">Your Voice.</span>
+        <div className="container relative z-10 px-4 py-20 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+          <div className="flex-1 text-center lg:text-left space-y-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 dark:bg-white/5 backdrop-blur-xl border border-zinc-200 dark:border-white/10 shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700">
+               <span className="relative flex h-2 w-2">
+                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+               </span>
+               <span className="text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">Official Community Hub</span>
+            </div>
+
+            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[7.5rem] font-black tracking-[-0.04em] leading-[0.9] lg:leading-[0.85] animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
+              <span className="block text-zinc-900 dark:text-white mb-2">Your</span>
+              <span className="block text-primary">Community.</span>
+              <span className="block italic text-destructive drop-shadow-sm mt-2">Your Voice.</span>
             </h1>
-            <p className="mt-8 max-w-2xl text-lg tracking-tight text-muted-foreground sm:text-2xl leading-relaxed">
-              The heart of local storytelling. Experience live broadcasts, breaking news, and community voices in one premium digital magazine.
+
+            <p className="max-w-xl mx-auto lg:mx-0 text-xl md:text-2xl tracking-tight text-zinc-500 dark:text-zinc-400 leading-relaxed font-medium animate-in fade-in slide-in-from-bottom-12 duration-700 delay-200">
+              The heart of local storytelling. Experience live broadcasts, breaking news, and community voices in one <span className="text-zinc-900 dark:text-white font-bold underline decoration-primary/30 decoration-4">premium digital magazine.</span>
             </p>
-            <div className="mt-12 flex flex-col sm:flex-row justify-center lg:justify-start gap-6">
-              <Button size="lg" className="h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20" asChild>
-                <Link href="/news">Explore News</Link>
+
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-5 animate-in fade-in slide-in-from-bottom-16 duration-700 delay-300">
+              <Button size="lg" className="h-16 px-10 rounded-2xl text-xl font-black shadow-2xl shadow-primary/25 hover:scale-[1.02] active:scale-95 transition-all bg-primary hover:bg-primary/90" asChild>
+                <Link href="/news">Read Latest</Link>
               </Button>
-              <Button size="lg" variant="outline" className="h-14 px-10 text-lg font-bold border-2 border-primary/20 hover:bg-primary/10 text-primary group" asChild>
-                <Link href="/live">
-                  <span className="relative flex h-3 w-3 mr-3 items-center justify-center">
+              <Button size="lg" variant="outline" className="h-16 px-10 rounded-2xl text-xl font-black border-4 border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 shadow-xl transition-all hover:scale-[1.02] active:scale-95 group" asChild>
+                <Link href="/live" className="flex items-center">
+                  <span className="relative flex h-4 w-4 mr-4 items-center justify-center">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-destructive opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-destructive"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-destructive"></span>
                   </span>
-                  Watch Live TV
+                  Watch TV
                 </Link>
               </Button>
             </div>
           </div>
           
-          <div className="flex-1 relative w-full max-w-2xl lg:max-w-none">
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-white/20 transform rotate-1 group-hover:rotate-0 transition-transform duration-500">
+          <div className="flex-1 relative w-full group perspective-[2000px] animate-in fade-in slide-in-from-right-12 duration-1000">
+            <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] border-[12px] border-white dark:border-zinc-900 transform rotate-[-2deg] group-hover:rotate-0 transition-all duration-700 hover:scale-[1.02]">
               <img 
                 src="/images/mockup.png" 
                 alt="AgborNews Digital Magazine Mockup" 
                 className="w-full h-auto object-cover"
               />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none"></div>
             </div>
-            {/* Decorative background elements for the image */}
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-destructive/10 rounded-full blur-3xl"></div>
+            
+            {/* Floating Stats Badges */}
+            <div className="absolute top-[10%] -left-12 z-20 bg-white dark:bg-zinc-900 p-6 rounded-3xl shadow-2xl border border-zinc-100 dark:border-white/10 hidden md:block animate-bounce-slow">
+               <p className="text-xs font-black text-zinc-400 uppercase tracking-widest mb-1">Active Readers</p>
+               <p className="text-3xl font-black text-primary">12.5k+</p>
+            </div>
+
+            <div className="absolute bottom-[20%] -right-8 z-20 bg-white dark:bg-zinc-900 p-6 rounded-3xl shadow-2xl border border-zinc-100 dark:border-white/10 hidden md:block animate-bounce-slow delay-700">
+               <p className="text-xs font-black text-zinc-400 uppercase tracking-widest mb-1">Live Now</p>
+               <p className="text-3xl font-black text-destructive italic">Agbor AM</p>
+            </div>
+
+            {/* Decorative background depth */}
+            <div className="absolute -top-12 -right-12 w-64 h-64 bg-primary/5 rounded-full blur-[100px]"></div>
+            <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-destructive/5 rounded-full blur-[100px]"></div>
           </div>
         </div>
       </section>
