@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Megaphone, TrendingUp, Users, Target, Mail } from "lucide-react";
+import { Megaphone, TrendingUp, Users, Target, Mail, Globe } from "lucide-react";
 import Link from "next/link";
 
 export default function AdvertisePage() {
