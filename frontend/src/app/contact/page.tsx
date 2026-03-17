@@ -46,7 +46,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-1">Call Us</p>
-                  <p className="text-xl font-bold">+234 (0) 800 AGBOR NEWS</p>
+                  <p className="text-xl font-bold">+1 (800) AGBOR-NEWS</p>
                 </div>
               </div>
 
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-xs font-black uppercase tracking-widest text-muted-foreground mb-1">Visit Us</p>
-                  <p className="text-xl font-bold">Old Lagos-Asaba Road, Agbor, Delta State</p>
+                  <p className="text-xl font-bold">1200 Smith Street, Houston, TX 77002, USA</p>
                 </div>
               </div>
             </div>
