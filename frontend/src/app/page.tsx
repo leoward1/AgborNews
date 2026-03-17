@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] lg:h-[90vh] flex items-center justify-center overflow-hidden bg-[#fafafa] dark:bg-zinc-950">
+      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center bg-[#fafafa] dark:bg-zinc-950 overflow-hidden">
         {/* Advanced Background Gradients */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
            <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-primary/15 rounded-full blur-[150px] animate-pulse"></div>
@@ -13,7 +13,7 @@ export default function Home() {
            <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
         </div>
         
-        <div className="container relative z-10 px-4 py-20 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        <div className="container relative z-10 px-4 py-24 lg:py-32 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           <div className="flex-1 text-center lg:text-left space-y-10">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/50 dark:bg-white/5 backdrop-blur-xl border border-zinc-200 dark:border-white/10 shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700">
                <span className="relative flex h-2 w-2">
